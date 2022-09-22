@@ -1,0 +1,8 @@
+//Calls module
+//Update Default Reminder of Calls to 15 Minutes before
+
+call_details = zoho.crm.getRecordById("Calls",call_id);
+mp = Map();
+mp.put("Reminder","15 mins");
+res = zoho.crm.updateRecord("Calls",call_id,mp);
+info res;
